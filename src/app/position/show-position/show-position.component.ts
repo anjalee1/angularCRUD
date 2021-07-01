@@ -10,7 +10,7 @@ export class ShowPositionComponent implements OnInit {
 
   constructor(private service:SharedService) { }
   PositionList:any=[];
-  ModalTitle?:string;
+  ModalTitle!:string;
   ActivateAddEditPosComp:boolean=false;
   pos:any;
 
@@ -21,7 +21,7 @@ export class ShowPositionComponent implements OnInit {
   addClick(){
     this.pos={
       PositionId:0,
-      PositionName:""
+      Position:""
     }
     this.ModalTitle="Add Position";
     this.ActivateAddEditPosComp=true;

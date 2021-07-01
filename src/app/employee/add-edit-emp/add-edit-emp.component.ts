@@ -11,11 +11,11 @@ export class AddEditEmpComponent implements OnInit {
   constructor(private service:SharedService) { }
 
   @Input() emp:any;
-  EmployeeId?:string;
-  EmployeeName?:string;
-  Position?:string;
-  DateOfJoining?:string;
-  Contact?:string
+  EmployeeId!:string;
+  EmployeeName!:string;
+  Position!:string;
+  DateOfJoining!:string;
+  Contact!:string
 
   PositionsList:any=[];
 
@@ -31,7 +31,7 @@ export class AddEditEmpComponent implements OnInit {
       this.EmployeeName=this.emp.EmployeeName;
       this.Position=this.emp.Position;
       this.DateOfJoining=this.emp.DateOfJoining;
-      this.DateOfJoining=this.emp.DateOfJoining;
+      this.Contact=this.emp.Contact;
      
     });
   }
@@ -40,8 +40,8 @@ export class AddEditEmpComponent implements OnInit {
     var val = {EmployeeId:this.EmployeeId,
                 EmployeeName:this.EmployeeName,
                 Position:this.Position,
-              DateOfJoining:this.DateOfJoining,
-              Contact:this.Contact}
+               DateOfJoining:this.DateOfJoining,
+               Contact:this.Contact};
 
     this.service.addEmployee(val).subscribe(res=>{
       alert(res.toString());

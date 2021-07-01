@@ -1,6 +1,6 @@
 <div class="d-flex flex-row bd-highlight mb-3">
 
-    <div class="form-froup row" style="width: 60%;">
+    <div class="form-froup row" style="width: 50%;">
     
         <label class="col-sm-2 col-form-label">Employee Name</label>
         <div class="col-sm-10">
@@ -8,12 +8,12 @@
             placeholder="Enter Employee Name">
         </div>
     
-        <label class="col-sm-2 col-form-label">Department</label>
+        <label class="col-sm-2 col-form-label">Position</label>
         <div class="col-sm-10">
            <select class="form-control" [(ngModel)]="Position">
                <option>--Select--</option>
                <option *ngFor="let posName of PositionsList">
-                   {{posName.PositionName}}
+                   {{posName.title}}
                </option>
            </select>
         </div>
@@ -22,6 +22,13 @@
         <div class="col-sm-10">
             <input type="date"  [(ngModel)]="DateOfJoining">
         </div>
+
+        <label class="col-sm-2 col-form-label">Contact Number</label>
+        <div class="col-sm-10">
+            <input type="text" class="form-control" [(ngModel)]="Contact"
+            placeholder="Enter Contact Number< ">
+        </div>
+    
     
     </div>
     

@@ -10,17 +10,17 @@ export class AddEditPositionComponent implements OnInit {
 
   constructor(private service:SharedService) { }
   @Input() pos:any;
-  PositionId?:string;
-  PositionName?:string;
+  PositionId!:string;
+  Position!:string;
 
   ngOnInit(): void {
     this.PositionId=this.pos.PositionId;
-    this.PositionName=this.pos.PositionName;
+    this.Position=this.pos.Position;
   }
 
   addPosition(){
     var val = {PositionId:this.PositionId,
-      PositionName:this.PositionName};
+      title:this.Position};
     this.service.addPosition(val).subscribe(res=>{
       alert(res.toString());
     });
@@ -28,7 +28,7 @@ export class AddEditPositionComponent implements OnInit {
 
   updatePosition(){
     var val = {PositionId:this.PositionId,
-      PositionName:this.PositionName};
+      title:this.Position};
     this.service.updatePosition(val).subscribe(res=>{
     alert(res.toString());
     });

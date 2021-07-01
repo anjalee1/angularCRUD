@@ -20,11 +20,11 @@ readonly APIUrl = "http://127.0.0.1:8000";
   }
 
   updatePosition(val:any){
-    return this.http.put(this.APIUrl + '/Position/',val);
+    return this.http.put(this.APIUrl + '/position/',val);
   }
 
   deletePosition(val:any){
-    return this.http.delete(this.APIUrl + '/Position/'+val);
+    return this.http.delete(this.APIUrl + '/position/'+val);
   }
 
 

@@ -12,7 +12,7 @@ export class ShowEmpComponent implements OnInit {
 
   EmployeeList:any=[];
 
-  ModalTitle?:string;
+  ModalTitle!:string;
   ActivateAddEditEmpComp:boolean=false;
   emp:any;
 
@@ -24,9 +24,9 @@ export class ShowEmpComponent implements OnInit {
     this.emp={
       EmployeeId:0,
       EmployeeName:"",
-      Department:"",
+      Position:"",
       DateOfJoining:"",
-      PhotoFileName:"anonymous.png"
+      Contact:""
     }
     this.ModalTitle="Add Employee";
     this.ActivateAddEditEmpComp=true;
